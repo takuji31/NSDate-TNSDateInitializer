@@ -1,0 +1,7 @@
+pod "NSDate-TNSDateInitializer", :path => "../NSDate-TNSDateInitializer.podspec"
+
+target "Demo" do
+end
+
+target "DemoTests" do
+end
