@@ -12,10 +12,11 @@
 SPEC_BEGIN(TNSDateInitializerSpec)
         describe(@"TNSDateInitializer", ^{
             __block NSCalendar* calendar = nil;
+            __block NSTimeZone *timeZone;
             beforeAll(^{
                 calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
                 calendar.locale = [NSLocale localeWithLocaleIdentifier:@"en_US_POSIX"];
-                NSTimeZone *timeZone = [NSTimeZone timeZoneWithName:@"UTC"];
+                timeZone = [NSTimeZone timeZoneWithName:@"UTC"];
                 calendar.timeZone = timeZone;
             });
             beforeEach(^{
@@ -49,7 +50,11 @@ SPEC_BEGIN(TNSDateInitializerSpec)
                         [[date should] equal:calendarDate];
                     });
                     it(@"should correct date", ^{
-                        NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
+                        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+                        dateFormatter.calendar = calendar;
+                        dateFormatter.timeZone = timeZone;
+                        dateFormatter.dateFormat = @"yyyy/MM/dd HH:mm:ss";
+                        [[[dateFormatter dateFromString:@"2014/02/03 17:49:50"] should] equal:date];
                     });
                 });
             });
