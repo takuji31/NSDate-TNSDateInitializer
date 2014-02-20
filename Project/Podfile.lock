@@ -16,6 +16,6 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Kiwi: 04c51e880831d291748ec702d42c4101f7eb95c9
-  NSDate-TNSDateInitializer: b5cae6d5fa3fd6c24262708ac799fe0a0bace2d8
+  NSDate-TNSDateInitializer: fb9c00175b537ecd67bc3679ddf8ad98ddbf280e
 
 COCOAPODS: 0.29.0
