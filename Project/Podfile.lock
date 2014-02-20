@@ -1,0 +1,14 @@
+PODS:
+  - NSDate-TNSDateInitializer (0.0.1)
+
+DEPENDENCIES:
+  - NSDate-TNSDateInitializer (from `../NSDate-TNSDateInitializer.podspec`)
+
+EXTERNAL SOURCES:
+  NSDate-TNSDateInitializer:
+    :path: ../NSDate-TNSDateInitializer.podspec
+
+SPEC CHECKSUMS:
+  NSDate-TNSDateInitializer: 25463e243041d2ab134f61533bac131bb49d4abc
+
+COCOAPODS: 0.29.0
