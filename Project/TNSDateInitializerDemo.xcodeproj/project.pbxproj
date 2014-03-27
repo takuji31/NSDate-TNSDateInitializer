@@ -212,7 +212,7 @@
 		B1EEA08118B5C55A00300D5A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Takuji Nishibayashi";
 				TargetAttributes = {
 					B1EEA0A918B5C55A00300D5A = {
@@ -231,8 +231,6 @@
 			mainGroup = B1EEA08018B5C55A00300D5A;
 			productRefGroup = B1EEA08A18B5C55A00300D5A /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-			);
 			projectRoot = "";
 			targets = (
 				B1EEA08818B5C55A00300D5A /* TNSDateInitializerDemo */,
@@ -386,7 +384,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -425,7 +422,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -486,7 +482,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 84A4EC4B39F24D61AE0E1CB9 /* Pods-TNSDateInitializerDemoTests.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TNSDateInitializerDemo.app/TNSDateInitializerDemo";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -510,7 +505,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 84A4EC4B39F24D61AE0E1CB9 /* Pods-TNSDateInitializerDemoTests.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TNSDateInitializerDemo.app/TNSDateInitializerDemo";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -545,6 +539,7 @@
 				B1EEA0BD18B5C55A00300D5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B1EEA0BE18B5C55A00300D5A /* Build configuration list for PBXNativeTarget "TNSDateInitializerDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -553,6 +548,7 @@
 				B1EEA0C018B5C55A00300D5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

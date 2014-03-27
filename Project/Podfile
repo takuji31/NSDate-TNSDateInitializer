@@ -3,5 +3,5 @@ target "TNSDateInitializerDemo" do
 end
 
 target "TNSDateInitializerDemoTests" do
-   pod 'Kiwi/XCTest', '~> 2.2.3'
+   pod 'Kiwi/XCTest', '~> 2.2'
 end

@@ -6,7 +6,7 @@
 //  Copyright 2014年 Takuji Nishibayashi. All rights reserved.
 //
 
-#import "Kiwi.h"
+#import <Kiwi/Kiwi.h>
 #import <NSDate-TNSDateInitializer/NSDate+TNSDateInitializer.h>
 
 SPEC_BEGIN(TNSDateInitializerSpec)
@@ -55,6 +55,20 @@ SPEC_BEGIN(TNSDateInitializerSpec)
                         dateFormatter.timeZone = timeZone;
                         dateFormatter.dateFormat = @"yyyy/MM/dd HH:mm:ss";
                         [[[dateFormatter dateFromString:@"2014/02/03 17:49:50"] should] equal:date];
+                    });
+                });
+                context(@"when created with in Japanese calendar", ^{
+                    __block NSDate *date = nil;
+                    beforeEach(^{
+                        [NSDate tns_setDefaultCalendar:calendar];
+                        NSCalendar *japaneseCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSJapaneseCalendar];
+                        japaneseCalendar.locale = [NSLocale localeWithLocaleIdentifier:@"en_US_POSIX"];
+                        japaneseCalendar.timeZone = timeZone;
+                        date = [NSDate dateWithYear:26 month:2 day:3 hour:17 minute:49 second:50 calendar:japaneseCalendar];
+                    });
+                    it(@"should equals date with calendar", ^{
+                        NSDate *calendarDate = [NSDate dateWithYear:2014 month:2 day:3 hour:17 minute:49 second:50 calendar:calendar];
+                        [[date should] equal:calendarDate];
                     });
                 });
             });
